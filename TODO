@@ -1,0 +1,22 @@
+TODO
+========
+* Add VMs/sandbox detection using APIs as:
+  -- CallNamedPipe http://msdn.microsoft.com/en-us/library/windows/desktop/aa365144(v=vs.85).aspx
+  -- GetNamedPipeClientComputerName http://msdn.microsoft.com/en-us/library/windows/desktop/aa365437(v=vs.85).aspx
+  -- GetNamedPipeClientProcessId http://msdn.microsoft.com/en-us/library/windows/desktop/aa365440(v=vs.85).aspx
+  -- GetNamedClientSessionId http://msdn.microsoft.com/en-us/library/windows/desktop/aa365442(v=vs.85).aspx
+  -- PeekNamedPipe http://msdn.microsoft.com/en-us/library/windows/desktop/aa365779(v=vs.85).aspx
+  -- WaitNamedPipe http://msdn.microsoft.com/en-us/library/windows/desktop/aa365800(v=vs.85).aspx 
+  -- Via shared folders
+  
+* To be fixed:
+  -- Process32First: it seems Pin is using this API to communicate its child process
+  -- CreateFile: it crashes when integrated with Cuckoo Sandbox (not yet find out the reason!)
+
+* Add VMs/sandbox detection using instruction set:ión
+  -- LDT/IDT/GDT
+  -- in eax, dx, with eax = 564D5868h, ebx = 0, ecx = 0Ah and edx = 5658
+     --> it leaves in ebx 564D5868h value (VMWare-specific detection)
+
+* Other techniques: keep an eye on P. Ferrie's paper ("Attacks on More ...")
+

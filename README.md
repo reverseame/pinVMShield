@@ -6,6 +6,8 @@ This project has been developed with Visual Studio 2008 v9.0.30729.1 SP, configu
 
 PinVMShield can be easily integrated with sandbox environments for automation of malware analysis tasks with DBI capabilities. Namely, we provide an integration for Cuckoo Sandbox. You can find it in the [`sandbox_integration`](sandbox_integration) folder. The file inside such a folder must be replace the one located at `$CUCKOOPATH/analyzer/windows/modules/packages`.
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
 ## Requeriments
 - Visual Studio 2008 (for compilation)
 - Pin 2.13-61206-msvc9 (for running, not assure to be reliable at newer versions)
